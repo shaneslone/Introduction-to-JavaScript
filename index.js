@@ -1,9 +1,11 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-let votingAge = 20;
-if (votingAge > 18) {
-  console.log('True');
+let votingAge = 18;
+if (votingAge >= 18) {
+  console.log(true);
+} else {
+  console.log(false);
 }
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
@@ -52,6 +54,7 @@ console.log(dogYears(10));
 
 const dogFeeder = (weight, age) => {
   if (age >= 1) {
+    // ages 1 year or older
     if (weight <= 5) {
       return weight * 0.05;
     } else if (weight <= 10) {
@@ -62,12 +65,16 @@ const dogFeeder = (weight, age) => {
       return weight * 0.02;
     }
   } else if (age > 0.58) {
+    // 7-12 months
     return weight * 0.04;
   } else if (age > 0.33) {
+    // 4-7 months
     return weight * 0.05;
   } else if (age > 0.16) {
+    // 2-4 months
     return weight * 0.1;
   } else {
+    // under 2 months
     return 'Too Young';
   }
 };
@@ -137,7 +144,7 @@ const annoyingSong = start => {
     );
   }
 };
-//console.log(annoyingSong(10));
+console.log(annoyingSong(4));
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -176,14 +183,9 @@ const numberOfVowels = string => {
       vowelCount++;
     }
   }
-
   return vowelCount;
 };
-console.log(
-  numberOfVowels(
-    'This is a string with several vowels in it, but just how many? aaaa'
-  )
-);
+console.log(numberOfVowels('How man vowels are in this string?'));
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
