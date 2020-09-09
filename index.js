@@ -20,7 +20,7 @@ console.log(var1);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-console.log(parseInt('1999'));
+Number('1999');
 
 //Task d: Write a function to multiply a*b
 
@@ -179,13 +179,13 @@ const numberOfVowels = string => {
   let vowelCount = 0;
 
   for (let i = 0; i < string.length; i++) {
-    if (vowels.indexOf(string[i]) !== -1) {
+    if (vowels.includes(string[i]) === true) {
       vowelCount++;
     }
   }
   return vowelCount;
 };
-console.log(numberOfVowels('How man vowels are in this string?'));
+console.log(numberOfVowels('There are 9 vowels in this string.'));
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
